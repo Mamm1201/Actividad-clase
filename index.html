@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Soluciones y Mantenimiento Integrado - Sistemas Tecnológicos y Asesorías"
+    />
+    <title>Soluciones y Mantenimiento Integrado</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      /* Reset CSS */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f5f5f5;
+        color: #333;
+        padding-top: 70px; /* Compensar el espacio del header fijo */
+      }
+
+      header {
+        background-color: #004c97;
+        color: white;
+        padding: 1em 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2em;
+        max-width: 1200px;
+        margin: auto;
+        height: 40px;
+      }
+
+      .logo {
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+      }
+
+      .nav-links li {
+        margin-left: 20px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        padding: 0.5em;
+        border-radius: 5px;
+        transition: background 0.3s;
+      }
+
+      .nav-links a:hover {
+        background-color: #0073e6;
+      }
+
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+      }
+
+      .hamburger div {
+        background-color: white;
+        height: 3px;
+        width: 25px;
+        margin: 3px 0;
+      }
+
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+          flex-direction: column;
+          background-color: #004c97;
+          width: 100%;
+          position: absolute;
+          top: 100%;
+          left: 0;
+        }
+
+        .nav-links.active {
+          display: flex;
+        }
+
+        .hamburger {
+          display: flex;
+        }
+
+        .nav-links li {
+          margin: 10px 0;
+          text-align: center;
+        }
+      }
+
+      /* Section de Inicio */
+      #inicio {
+        height: 100vh;
+        background: url("images/call-center-8643475_1280.jpg") no-repeat center
+          center/cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        color: white;
+        text-align: left;
+        padding: 0 2em;
+      }
+
+      #inicio h1 {
+        font-size: 30px;
+        margin-bottom: 0.5em;
+      }
+
+      #inicio p {
+        font-size: 1em;
+        margin-bottom: 1em;
+      }
+
+      #inicio .cta-button {
+        background-color: #0073e6;
+        color: white;
+        padding: 0.8em 2em;
+        text-decoration: none;
+        font-size: 1em;
+        border-radius: 5px;
+        transition: background 0.3s;
+      }
+
+      #inicio .cta-button:hover {
+        background-color: #005bb5;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <h1 class="logo">Soluciones y Mantenimiento Integrado</h1>
+        <ul class="nav-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <div class="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Sección de Inicio -->
+    <section id="inicio">
+      <h1>Soluciones y Mantenimiento Integrado</h1>
+      <p>
+        Diseño y elaboración de sistemas tecnológicos para hospitales,
+        industrias y empresas.
+      </p>
+
+      <a href="#contacto" class="cta-button">Solicitar Cotización</a>
+    </section>
+
+    <script>
+      // Script para el menú hamburguesa
+      const hamburger = document.querySelector(".hamburger");
+      const navLinks = document.querySelector(".nav-links");
+
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
